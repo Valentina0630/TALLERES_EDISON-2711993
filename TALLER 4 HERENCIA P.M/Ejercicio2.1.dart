@@ -36,16 +36,20 @@ class Empleado {
   }
 
   void mostrarInformacionCompleta() {
-    print('Información Completa del Empleado:');
-    mostrarInformacionBasica();
-    print('Sueldo Base: $sueldo');
-    print('Pago por Hora Extra: $pagoHoraExtra');
-    print('Horas Extra Realizadas en el Mes: $horasExtra');
-    print('Casado: $casado');
-    print('Número de hijos: $numeroHijos');
-    print('Sueldo Bruto: ${calcularSueldoBruto()}');
-    print('Retenciones: ${calcularRetenciones()}');
-    print('Sueldo Neto: ${calcularSueldoBruto() - calcularRetenciones()}');
+    print("|--------------------------------------------|");
+    print('|    Información Completa del Empleado:      |');
+    print("|--------------------------------------------|");
+    mostrarInformacionBasica(); 
+    print("|--------------------------------------------|");
+    print('|Sueldo Base: $sueldo                      |');
+    print('|Pago por Hora Extra: $pagoHoraExtra                |');
+    print('|Horas Extra Realizadas en el Mes: $horasExtra         |');
+    print('|Casado: $casado                                |');
+    print('|Número de hijos: $numeroHijos                          |');
+    print('|Sueldo Bruto: ${calcularSueldoBruto()}                     |');
+    print('|Retenciones: ${calcularRetenciones()}                        |');
+    print('|Sueldo Neto: ${calcularSueldoBruto() - calcularRetenciones()}                      |');
+    print("|--------------------------------------------|");
   }
 
 }
@@ -74,10 +78,14 @@ void main() {
   var empleado = Empleado(cedula, sueldo, pagoHoraExtra, horasExtra, casado, numeroHijos);
 
   // cálculos y mostrar la información
-  print('Informacion Basica de los Valores: ');
-  print('Pago por las Horas Extras del Mes: ${empleado.calcularPagoHorasExtra()}');
-  print('Sueldo del Empleado: ${empleado.calcularSueldoBruto()}');
-  print('Retenciones del Empleado: ${empleado.calcularRetenciones()}');
+  print("|--------------------------------------------|");
+  print('|           Informacion Basica:              |');
+  print("|--------------------------------------------|");
+  print('|1.Pago por las Horas Extras del Mes:${empleado.calcularPagoHorasExtra()}|');
+  print('|2.Sueldo del Empleado: ${empleado.calcularSueldoBruto()}            |');
+  print('|3.Retenciones del Empleado: ${empleado.calcularRetenciones()}         |');
+  print("|--------------------------------------------|\n");
+  
 
   // Mostrar información del empleado
   empleado.mostrarInformacionCompleta();
